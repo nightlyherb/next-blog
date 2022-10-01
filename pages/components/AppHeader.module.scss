@@ -1,0 +1,14 @@
+:where(.header) {
+  position: sticky;
+  top: 0;
+}
+
+:where(.header) {
+  @import "./app-bar.scss";
+  @include app-bar();
+}
+
+:where(.header nav) {
+  display: flex;
+  align-items: center;
+}

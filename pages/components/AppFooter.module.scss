@@ -1,0 +1,5 @@
+@import "./app-bar.scss";
+
+:where(.footer) {
+  @include app-bar;
+}
