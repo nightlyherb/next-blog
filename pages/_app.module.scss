@@ -1,3 +1,5 @@
+@use "/styles/scale.scss";
+
 :where(.app) {
   // Layout
   display: grid;
@@ -6,5 +8,5 @@
 }
 
 :where(.app > *) {
-  padding: var(--spacing);
+  padding: scale.rem(0);
 }
