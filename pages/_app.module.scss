@@ -1,17 +1,47 @@
+@use "~open-color" as *;
 @use "/styles/scale.scss";
-@use "./components/main-content.scss" as *;
+
+@mixin main-banner {
+  background-color: $oc-teal-5;
+  color: $oc-gray-9;
+}
+
+@mixin main-content {
+  background-color: $oc-teal-1;
+  color: $oc-gray-9;
+}
 
 :where(.app) {
   // Layout
   display: grid;
+  grid-template-columns: 1fr auto 1fr;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
 
-:where(.app > *) {
+:where(.app > header) {
+  @include main-banner;
+
+  position: sticky;
+  top: 0;
+
+  grid-column: 1 / -1;
+
   padding: scale.rem(0);
 }
 
 :where(.app > main) {
   @include main-content;
+
+  grid-column: 1 / -1;
+
+  padding: scale.rem(0);
+}
+
+:where(.app > footer) {
+  @include main-banner;
+
+  grid-column: 1 / -1;
+
+  padding: scale.rem(0);
 }

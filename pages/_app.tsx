@@ -2,8 +2,8 @@ import "../styles/globals.css";
 import Head from "next/head";
 import type { AppProps } from "next/app";
 import styles from "./_app.module.scss";
-import AppHeader from "./components/AppHeader";
-import AppFooter from "./components/AppFooter";
+import AppHeaderContent from "./components/AppHeaderContent";
+import AppFooterContent from "./components/AppFooterContent";
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -14,13 +14,17 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
 
       <div className={styles.app}>
-        <AppHeader />
+        <header>
+          <AppHeaderContent />
+        </header>
 
         <main>
           <Component {...pageProps} />
         </main>
 
-        <AppFooter />
+        <footer>
+          <AppFooterContent />
+        </footer>
       </div>
     </>
   );

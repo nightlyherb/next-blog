@@ -1,5 +1,0 @@
-@use "./main-banner.scss" as *;
-
-:where(.footer) {
-  @include main-banner;
-}
