@@ -1,5 +1,5 @@
-@import "./app-bar.scss";
+@use "./main-banner.scss" as *;
 
 :where(.footer) {
-  @include app-bar;
+  @include main-banner;
 }

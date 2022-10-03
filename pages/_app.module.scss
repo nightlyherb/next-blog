@@ -1,4 +1,5 @@
 @use "/styles/scale.scss";
+@use "./components/main-content.scss" as *;
 
 :where(.app) {
   // Layout
@@ -9,4 +10,8 @@
 
 :where(.app > *) {
   padding: scale.rem(0);
+}
+
+:where(.app > main) {
+  @include main-content;
 }

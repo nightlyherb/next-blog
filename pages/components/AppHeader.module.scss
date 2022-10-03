@@ -1,11 +1,12 @@
+@use "./main-banner.scss" as *;
+
 :where(.header) {
   position: sticky;
   top: 0;
 }
 
 :where(.header) {
-  @import "./app-bar.scss";
-  @include app-bar();
+  @include main-banner;
 }
 
 :where(.header nav) {

@@ -1,0 +1,10 @@
+@use "~open-color" as *;
+
+@mixin main-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $oc-teal-5;
+  color: $oc-gray-9;
+}
