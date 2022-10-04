@@ -1,0 +1,13 @@
+@use "~open-color" as *;
+@use "/styles/utils/shadow.scss" as shadow;
+@use "/styles/scale.scss";
+
+@mixin main-banner {
+  @include shadow.default-shadow;
+
+  background-color: $oc-teal-5;
+  color: $oc-gray-9;
+
+  border-radius: 100vmax;
+  min-height: scale.rem(6);
+}

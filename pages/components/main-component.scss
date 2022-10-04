@@ -1,0 +1,6 @@
+@use "/styles/scale.scss";
+
+@mixin main-component {
+  $padding: scale.rem(0);
+  padding-inline: $padding;
+}

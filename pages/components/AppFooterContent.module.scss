@@ -1,4 +1,10 @@
-.footer {
+@use "./main-banner.scss" as *;
+@use "./main-component" as *;
+
+:where(.footer) {
+  @include main-banner;
+  @include main-component;
+
   display: flex;
   align-items: center;
   justify-content: space-between;

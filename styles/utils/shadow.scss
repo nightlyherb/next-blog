@@ -1,0 +1,7 @@
+@mixin default-shadow {
+  $x: 0;
+  $y: 2px;
+  $blur: 2px;
+  $spread: 0px;
+  box-shadow: $x $y $blur $spread rgba(0 0 0 / 0.15);
+}

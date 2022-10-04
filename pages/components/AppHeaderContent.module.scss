@@ -1,4 +1,10 @@
-.header {
+@use "./main-banner.scss" as *;
+@use "./main-component.scss" as *;
+
+:where(.header) {
+  @include main-banner;
+  @include main-component;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
