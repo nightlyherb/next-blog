@@ -1,0 +1,32 @@
+@use "sass:list";
+@use "sass:math";
+
+@function floordiv($x, $y) {
+  @return math.floor(math.div($x, $y));
+}
+
+@function mod($x, $y) {
+  @return $x - ($y * floordiv($x, $y));
+}
+
+@function multiplier($n) {
+  $basic-scales: (1, 1.19, 1.41, 1.68);
+  $basic-scales-length: list.length($basic-scales);
+  $derived-scale-ratio: 2;
+
+  $div: floordiv($n, $basic-scales-length);
+  $mod: mod($n, $basic-scales-length);
+
+  @return (
+    math.pow($derived-scale-ratio, $div)
+    * list.nth($basic-scales, $mod + 1)
+  );
+}
+
+@function rem($n) {
+  @return 1rem * multiplier($n);
+}
+
+@function px($n) {
+  @return 16px * multiplier($n);
+}

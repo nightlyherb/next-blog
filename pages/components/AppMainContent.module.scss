@@ -1,0 +1,5 @@
+@use "./main-component.scss" as *;
+
+:where(.container) {
+  @include main-component;
+}
